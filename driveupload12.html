@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORLD INSTITUTE OF ORIENTAL HERITAGE & CULTURE - Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .header-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header-container h1, .header-container h2, .header-container p {
+            margin: 5px 0;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            margin-top: 15px;
+        }
+
+        button {
+            background-color: #4285f4;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #357ae8;
+        }
+
+        .success-message {
+            display: none;
+            color: green;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        #imagePreview, #signaturePreview {
+            max-height: 110px;
+            max-width: 170px;
+        }
+
+        #declaration{
+            padding-left: 50%;
+            
+        }
+        #imagePreview{
+            padding-right: 10px;
+            
+
+        }
+
+        #serialNumber{
+            width: 15%;
+            /* font-size: small; */
+            padding: 8px;
+            padding-left: 7px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box
+        }
+
+        #name{
+            width: 65%;
+            padding: 8px;
+            padding-left: 7px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box
+        }
+        #decllaration{
+            height:50%;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            padding: 12px;
+            padding-left: 7px;
+            text-align: justify;
+            text-transform: unset;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box
+
+
+        }
+
+        #currentDate{
+            /* text-align: right; */
+            /* font-size: small; */
+            /* padding-right: 7px; */
+            
+            padding: 8px;
+            padding-left: 7px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            width: 25%
+
+
+        }
+
+
+
+    </style>
+</head>
+<body onload="generateSerial()">
+
+
+
+<div class="form-container" id="formContainer">
+
+    <div class="header-container">
+        <h1>WORLD INSTITUTE OF ORIENTAL HERITAGE & CULTURE</h1>
+        <h2>22nd INTERNATIONAL ASTROLOGY, SPIRITUAL & VASTU CONFERENCE 2023 A.D.</h2>
+        <p>In association with: WORLD ASTROLOGERS SOCIETY</p>
+        <p>Off.: 5/F, Shyama Charan Maitra Lane, Kolkata 700036, West Bengal, India</p>
+        <p>An ISO 9001-2015 Certified Organisation | Regd. Mobile: 09831186738 | E-mail: malayshastri@gmail.com</p>
+    </div>
+
+    
+        <div class="form-group">
+          <label for="serialNumber">SI. No.</label>
+          <p id="serialNumber" name="serialNumber" onload="generateSerial()" required></p>
+          <script>
+            let serialNumber = 1500;
+  
+            function generateSerial() {
+              serialNumber++;
+              document.getElementById("serialNumber").textContent = serialNumber;
+            }
+          </script>
+        </div>
+      
+        
+        <div class="form-group">
+            <label for="datetime">Date </label>
+            <p id="currentDate" name="currentDate" required></p><script>
+
+                // Get today's date
+                
+                const today = new
+                Date().toLocaleDateString();
+                
+                // Display the date in theparagraph
+                
+                document.getElementById("currentDate").textContent = today;
+                
+                </script>
+        </div>
+        <!-- <p id="datetime"></p>
+
+    <script >
+      // Get current date and time
+      var now = new Date();
+      var datetime = now.toLocaleString();
+    
+      // Insert date and time into HTML
+      document.getElementById("datetime").innerHTML = datetime;
+    </script> -->
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Date Of Birth</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fathersName">Father's Name</label>
+            <input type="text" id="fathersName" name="fathersName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Permanent Address</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="village">Village</label>
+            <input type="text" id="village" name="village" required>
+        </div>
+
+        <div class="form-group">
+            <label for="po">P. O.</label>
+            <input type="text" id="po" name="po" required>
+        </div>
+
+        <div class="form-group">
+            <label for="ps">P. S.</label>
+            <input type="text" id="ps" name="ps" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dist">Dist.</label>
+            <input type="text" id="dist" name="dist" required>
+        </div>
+
+        <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required>
+        </div>
+
+        <div class="form-group">
+            <label for="pin">Pin</label>
+            <input type="number" id="pin" name="pin" required>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" required>
+        </div>
+
+        <div class="form-group">
+            <label for="mobile">Mobile No.</label>
+            <input type="text" id="mobile" name="mobile" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="whatsapp">WhatsApp</label>
+            <input type="text" id="whatsapp" name="whatsapp" required>
+        </div>
+
+        <div class="form-group">
+            <label for="education">Educational Qualifications</label>
+            <input type="text" id="education" name="education" required>
+        </div>
+
+        <div class="form-group">
+            <label for="occupation">Occupation</label>
+            <input type="text" id="occupation" name="occupation" required>
+        </div>
+
+        <div class="form-group">
+            <label for="experience">Astrological Experience</label>
+            <textarea id="experience" name="experience" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="referenceName">Reference Name</label>
+            <input type="text" id="referenceName" name="referenceName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="refPhone">Reference Phone No.</label>
+            <input type="text" id="refPhone" name="refPhone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fees">Fees</label>
+            <input type="number" id="fees" name="fees" required>
+        </div>
+
+        <div class="form-group">
+            <label for="place">Place</label>
+            <input type="text" id="place" name="place" required>
+        </div>
+
+        
+
+        <div class="form-group">
+            <label>Declaration</label>
+            <input type="checkbox" id="declaration" name="declaration" required><textarea id="decllaration" name="declaration" rows="2" required style="max-height: 117px; max-width: 689px;">I have no objection if any kind of my speech, discussion, and picture is revealed/published on Facebook, WhatsApp, Mail, and Social Media in this Conference. Under no circumstances, the Organization will not be liable/responsible if arising any kind of conflict/doubt and all disputes are subject to the jurisdiction of the Courts in Kolkata only.
+                            </textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="signatureUpload">Signature (Upload Image)</label>
+            <input type="file" id="signatureUpload" accept="image/*" required>
+            <img src="" alt="Preview Signature" id="signaturePreview" >
+        </div>
+
+        <div class="form-group">
+            <label for="imageUpload">Upload Image</label>
+            <input type="file" id="imageUpload" accept="image/*" required>
+            <img src="" alt="Preview Image" id="imagePreview" style="position: absolute; top: 50%; right:29%">
+        </div>
+
+        <div class="form-group">
+            <label for="pdfUpload">Upload PDF</label>
+            <input type="file" id="pdfUpload" accept="application/pdf" required>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+    <div class="success-message" id="successMessage">Form submitted successfully!</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script>
+    let url = "https://script.google.com/macros/s/AKfycbzSo6Zczp9vv0LuAXHZfYzNT2w3oyoVead_25RM6DsqDgLKBeA1JDNNjGhDNPjQLXA/exec"; 
+
+    let fileInput = document.querySelector("#imageUpload");
+    let pdfInput = document.querySelector("#pdfUpload");
+    let signatureInput = document.querySelector("#signatureUpload");
+    let imgPreview = document.querySelector("#imagePreview");
+    let signaturePreview = document.querySelector("#signaturePreview");
+    let form = document.querySelector("#uploadForm");
+    let successMessage = document.querySelector("#successMessage");
+
+    fileInput.addEventListener('change', () => {
+        let fr = new FileReader();
+        fr.addEventListener('loadend', () => {
+            let res = fr.result;
+            imgPreview.src = res;
+        });
+        fr.readAsDataURL(fileInput.files[0]);
+    });
+
+    signatureInput.addEventListener('change', () => {
+        let fr = new FileReader();
+        fr.addEventListener('loadend', () => {
+            let res = fr.result;
+            signaturePreview.src = res;
+        });
+        fr.readAsDataURL(signatureInput.files[0]);
+    });
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        html2canvas(document.querySelector("#formContainer"), {
+            onrendered: function(canvas) {
+                let screenshotBase64 = canvas.toDataURL().split("base64,")[1];
+
+                let frImg = new FileReader();
+                frImg.addEventListener('loadend', () => {
+                    let imageBase64 = frImg.result.split("base64,")[1];
+
+                    let frSignature = new FileReader();
+                    frSignature.addEventListener('loadend', () => {
+                        let signatureBase64 = frSignature.result.split("base64,")[1];
+
+                        let frPdf = new FileReader();
+                        frPdf.addEventListener('loadend', () => {
+                            let pdfBase64 = frPdf.result.split("base64,")[1];
+
+                            let obj = {
+                                base64Image: imageBase64,
+                                imageType: fileInput.files[0].type,
+                                imageName: fileInput.files[0].name,
+                                base64Signature: signatureBase64,
+                                signatureType: signatureInput.files[0].type,
+                                signatureName: signatureInput.files[0].name,
+                                base64Pdf: pdfBase64,
+                                pdfType: pdfInput.files[0].type,
+                                pdfName: pdfInput.files[0].name,
+                                screenshotBase64: screenshotBase64,
+                                siNo: document.querySelector("#siNo").value,
+                                name: document.querySelector("#name").value,
+                                fathersName: document.querySelector("#fathersName").value,
+                                address: document.querySelector("#address").value,
+                                village: document.querySelector("#village").value,
+                                po: document.querySelector("#po").value,
+                                ps: document.querySelector("#ps").value,
+                                dist: document.querySelector("#dist").value,
+                                state: document.querySelector("#state").value,
+                                pin: document.querySelector("#pin").value,
+                                country: document.querySelector("#country").value,
+                                mobile: document.querySelector("#mobile").value,
+                                email: document.querySelector("#email").value,
+                                whatsapp: document.querySelector("#whatsapp").value,
+                                education: document.querySelector("#education").value,
+                                occupation: document.querySelector("#occupation").value,
+                                experience: document.querySelector("#experience").value,
+                                referenceName: document.querySelector("#referenceName").value,
+                                refPhone: document.querySelector("#refPhone").value,
+                                fees: document.querySelector("#fees").value,
+                                place: document.querySelector("#place").value,
+                                date: document.querySelector("#date").value
+                            };
+
+                            fetch(url, {
+                                method: "POST",
+                                body: JSON.stringify(obj)
+                            })
+                            .then(r => r.text())
+                            .then(data => {
+                                console.log(data);
+                                successMessage.style.display = "block";
+                            });
+                        });
+                        frPdf.readAsDataURL(pdfInput.files[0]);
+                    });
+                    frSignature.readAsDataURL(signatureInput.files[0]);
+                });
+                frImg.readAsDataURL(fileInput.files[0]);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
